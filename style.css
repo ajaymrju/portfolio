@@ -38,17 +38,26 @@ section {
   color: inherit;
 }
 .link-primary {
-  padding: 0.8rem 1.4rem;
+  padding: 0.6rem 1.4rem;
   background-color: var(--primary-color);
   color: #fff;
   margin: 1rem auto;
   border-radius: 2rem;
 }
+.link-primary:hover {
+  transition: 0.3s;
+  background: #3e4049;
+}
 .link-secondary {
-  padding: 0.8rem 1.4rem;
+  padding: 0.5rem 1.3rem;
   color: var(--primary-color);
   margin: 1rem auto;
   border-radius: 2rem;
+  border: 1px solid var(--primary-color);
+}
+.link-secondary:hover {
+  transition: 0.3s;
+  background: white;
 }
 
 nav {
@@ -126,4 +135,44 @@ section:nth-child(2n + 1) {
 
 .tech-icons li {
   font-size: 48px;
+}
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  place-content: center;
+  margin-top: 96px;
+}
+.projects-list section {
+  background: white;
+  border-radius: 0;
+}
+.projects-list section:nth-child(1) {
+  background: var(--off-white);
+}
+.projects-list section:nth-child(4n) {
+  background: var(--off-white);
+}
+.cta-wrapper a:first-child {
+  margin-right: 18px;
+}
+
+.blog-headline {
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-wrap {
+  width: 75%;
+  text-align: left;
+  background: var(--off-white);
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .projects-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .projects-list section {
+    width: 80%;
+    border-radius: 1rem;
+  }
 }
