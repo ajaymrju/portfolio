@@ -1,2 +1,2 @@
 # portfolio
-Portfolio site.
+This is a portfolio site which describes me.
