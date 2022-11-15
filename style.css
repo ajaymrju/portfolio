@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #526a57;
+  --off-white: #f3f5f2;
+  --dark-gray: #6b7280;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0px auto;
+  max-width: 1228px;
+}
+
+section {
+  margin: auto;
+  max-width: 1228px;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+
+.flex-reverse {
+  display: flex-reverse;
+}
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: inherit;
+}
+.link-primary {
+  padding: 0.6rem 1.4rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  margin: 1rem auto;
+  border-radius: 2rem;
+}
+.link-primary:hover {
+  transition: 0.3s;
+  background: #3e4049;
+}
+.link-secondary {
+  padding: 0.5rem 1.3rem;
+  color: var(--primary-color);
+  margin: 1rem auto;
+  border-radius: 2rem;
+  border: 1px solid var(--primary-color);
+}
+.link-secondary:hover {
+  transition: 0.3s;
+  background: white;
+}
+
+nav {
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 1rem 1rem;
+  position: sticky;
+  top: 0;
+}
+
+nav .logo {
+  font-size: 16px;
+  font-weight: 600;
+}
+.logo::after {
+  content: "Ajay Maroju";
+}
+nav .logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  background: var(--primary-color);
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
+  color: var(--off-white);
+  font-weight: 300;
+  margin-top: 92px;
+}
+footer .social-links {
+  padding: 0;
+  justify-content: center;
+}
+footer .social-links {
+  margin: 0;
+  font-size: 32px;
+}
+section.hero {
+  max-width: 80%;
+  padding: 7rem;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+section.hero .right img {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+}
+section.hero .left .headline {
+  font-weight: 400;
+  font-size: 38px;
+}
+section.hero .tag {
+  margin: 0px;
+  width: fit-content;
+  background: #f9fdfa;
+  border-radius: 0.4rem;
+  font-weight: 300;
+}
+section.hero .left .profession {
+  color: var(--primary-color);
+}
+
+section:nth-child(2n + 1) {
+  background: var(--off-white);
+}
+.tech-icons {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  place-content: center;
+  color: var(--primary-color);
+}
+
+.tech-icons li {
+  font-size: 48px;
+}
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  place-content: center;
+  margin-top: 96px;
+}
+.projects-list section {
+  background: white;
+  border-radius: 0;
+}
+.projects-list section:nth-child(1) {
+  background: var(--off-white);
+}
+.projects-list section:nth-child(4n) {
+  background: var(--off-white);
+}
+.cta-wrapper a:first-child {
+  margin-right: 18px;
+}
+
+.blog-headline {
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-wrap {
+  width: 75%;
+  text-align: left;
+  background: var(--off-white);
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .projects-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .projects-list section {
+    width: 80%;
+    border-radius: 1rem;
+  }
+  section.hero {
+    padding: 96px 40px;
+  }
+}
+@media screen and (max-width: 728px) {
+  .logo::after {
+    content: "AM";
+    padding: 8px;
+    border-radius: 5rem;
+    border: 1px solid #fff;
+  }
+  nav {
+    padding: 1.5rem;
+  }
+  section.hero {
+    padding: 60px 30px;
+    flex-wrap: wrap;
+  }
+  section.hero .left .headline {
+    font-size: 26px;
+  }
+  section.hero .left {
+    order: 2;
+  }
+  section.hero .right img {
+    width: 70%;
+    margin: auto;
+  }
+  footer {
+    margin-top: 64px;
+  }
+}
